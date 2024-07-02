@@ -1,15 +1,27 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Rest Api Free",
+    "title": "REST API GRATIS",
     "contact": {
-      "name": "Information Rest Api",
-      "url": "https://whatsapp.com/channel/0029Vae6iYe30LKGkbTvBC3E",
-      "whatsapp": "+6282131140856"
+      "name": "Akuivan13",
+      "url": "https://riskimivan.my.id",
+      "whatsapp": "+6289505520763"
     }
   },
   "paths": {
-    "/ai": {
+    "/hello": {
+      "get": {
+        "tags": ["Test Here"],
+        "summary": "Menyapa Dunia",
+        "description": "Endpoint untuk menyapa dunia",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ai": {
       "get": {
         "tags": ["Ai"],
         "summary": "Interaksi dengan AI",
@@ -35,7 +47,7 @@
     "/pinterest": {
   "get": {
     "summary": "Get images from Pinterest",
-    "tags": ["Search"],
+    "tags": ["Pinterest"],
     "parameters": [
       {
         "in": "query",
@@ -74,7 +86,7 @@
 "/wallpaper": {
   "get": {
     "summary": "Get wallpapers",
-    "tags": ["Random"],
+    "tags": ["Wallpaper"],
     "parameters": [
       {
         "in": "query",
@@ -129,7 +141,7 @@
 "/wikimedia": {
   "get": {
     "summary": "Search images on Wikimedia Commons",
-    "tags": ["Random"],
+    "tags": ["Wikimedia"],
     "parameters": [
       {
         "in": "query",
@@ -173,11 +185,11 @@
       }
     }
   }
-},    
+},
 "/quotesanime": {
   "get": {
     "summary": "Get quotes from anime",
-    "tags": ["Random"],
+    "tags": ["Quotes Anime"],
     "responses": {
       "200": {
         "description": "Successful response",
@@ -227,10 +239,56 @@
     }
   }
 },
+"/aiovideodl": {
+  "post": {
+    "summary": "Download video or audio using AIO Video Downloader",
+    "tags": ["AIO Video Downloader"],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "link": {
+                "type": "string",
+                "format": "uri",
+                "description": "URL of the video or audio to download"
+              }
+            },
+            "required": ["link"]
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "Successful response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "Title of the video or audio"
+                },
+                "download_url": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "Download URL of the video or audio"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+},
 "/umma": {
   "get": {
     "summary": "Get media content from a URL using Umma",
-    "tags": ["Random"],
+    "tags": ["Umma"],
     "parameters": [
       {
         "in": "query",
@@ -299,7 +357,7 @@
 "/ringtone": {
   "get": {
     "summary": "Get ringtones",
-    "tags": ["Random"],
+    "tags": ["Ringtone"],
     "parameters": [
       {
         "in": "query",
@@ -347,7 +405,7 @@
 "/styletext": {
   "get": {
     "summary": "Style text",
-    "tags": ["Random"],
+    "tags": ["Style Text"],
     "parameters": [
       {
         "in": "query",
@@ -392,7 +450,7 @@
     
     
     
-
+    
  "/ronaldo": {
     "get": {
       "tags": ["Random"],
@@ -464,8 +522,8 @@
         }
       }
     }
-  },    
-    "/tiktok": {
+  },
+    "/api/tiktok": {
       "get": {
         "tags": ["Downloader"],
         "summary": "Unduh Video TikTok",
@@ -488,7 +546,7 @@
         }
       }
     },
-    "/igdl": {
+    "/api/igdl": {
       "get": {
         "tags": ["Downloader"],
         "summary": "Unduh Konten Instagram",
@@ -513,7 +571,7 @@
     },
     "/ghstalk": {
       "get": {
-        "tags": ["Stalk"],
+        "tags": ["Search"],
         "summary": "Stalk Github User",
         "description": "Endpoint untuk Github Stalk",
         "parameters": [
@@ -533,10 +591,10 @@
           }
         }
       }
-    },    
+    },
         "/ffstalk": {
       "get": {
-        "tags": ["Stalk"],
+        "tags": ["Search"],
         "summary": "Stalk Freefire User",
         "description": "Endpoint untuk Freefire Stalk",
         "parameters": [
@@ -556,7 +614,59 @@
           }
         }
       }
+    },"/cuaca": {
+  "post": {
+    "tags": ["Post"],
+    "summary": "Mendapatkan informasi cuaca",
+    "description": "Endpoint untuk mendapatkan informasi cuaca berdasarkan nama kota.",
+    "requestBody": {
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "Nama kota untuk mendapatkan informasi cuaca.",
+                "example": "Jakarta"
+              }
+            },
+            "required": ["text"]
+          }
+        }
+      }
     },
+    "responses": {
+      "200": {
+        "description": "OK",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "location": { "type": "string" },
+                "country": { "type": "string" },
+                "description": { "type": "string" },
+                "temperature": { "type": "number" },
+                "temp_max": { "type": "number" },
+                "temp_min": { "type": "number" },
+                "humidity": { "type": "number" },
+                "wind_speed": { "type": "number" }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request"
+      },
+      "500": {
+        "description": "Internal Server Error"
+      }
+    }
+  }
+},
 "/ytsearch": {
       "get": {
         "tags": ["Search"],
@@ -625,7 +735,7 @@
           }
         }
       }
-    },    
+    },
     "/tiktok": {
       "get": {
         "tags": ["Downloader"],
@@ -717,7 +827,7 @@
           }
         }
       }
-    },    
+    },
     "/ytmp3": {
       "get": {
         "tags": ["Downloader"],
@@ -809,7 +919,7 @@
           }
         }
       }
-    },    
+    },
                 "/playaudio": {
       "get": {
         "tags": ["Downloader"],
@@ -857,9 +967,9 @@
         }
       }
     },
-    "/igstalk": {
+    "/api/igstalk": {
       "get": {
-        "tags": ["Stalk"],
+        "tags": ["Search"],
         "summary": "Informasi Pengguna Instagram",
         "description": "Endpoint untuk mendapatkan informasi pengguna Instagram",
         "parameters": [
@@ -881,4 +991,4 @@
       }
     }
   }
-}    
+}

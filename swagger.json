@@ -9,19 +9,7 @@
     }
   },
   "paths": {
-    "/hello": {
-      "get": {
-        "tags": ["Test Here"],
-        "summary": "Menyapa Dunia",
-        "description": "Endpoint untuk menyapa dunia",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/ai": {
+    "/ai": {
       "get": {
         "tags": ["Ai"],
         "summary": "Interaksi dengan AI",

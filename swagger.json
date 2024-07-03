@@ -35,7 +35,7 @@
     "/pinterest": {
   "get": {
     "summary": "Get images from Pinterest",
-    "tags": ["Pinterest"],
+    "tags": ["Search"],
     "parameters": [
       {
         "in": "query",
@@ -74,7 +74,7 @@
 "/wallpaper": {
   "get": {
     "summary": "Get wallpapers",
-    "tags": ["Wallpaper"],
+    "tags": ["Random"],
     "parameters": [
       {
         "in": "query",
@@ -129,7 +129,7 @@
 "/wikimedia": {
   "get": {
     "summary": "Search images on Wikimedia Commons",
-    "tags": ["Wikimedia"],
+    "tags": ["Random"],
     "parameters": [
       {
         "in": "query",
@@ -177,7 +177,7 @@
 "/quotesanime": {
   "get": {
     "summary": "Get quotes from anime",
-    "tags": ["Quotes Anime"],
+    "tags": ["Random"],
     "responses": {
       "200": {
         "description": "Successful response",
@@ -230,7 +230,7 @@
 "/aiovideodl": {
   "post": {
     "summary": "Download video or audio using AIO Video Downloader",
-    "tags": ["AIO Video Downloader"],
+    "tags": ["Downloader"],
     "requestBody": {
       "content": {
         "application/json": {
@@ -276,7 +276,7 @@
 "/umma": {
   "get": {
     "summary": "Get media content from a URL using Umma",
-    "tags": ["Umma"],
+    "tags": ["Random"],
     "parameters": [
       {
         "in": "query",
@@ -345,7 +345,7 @@
 "/ringtone": {
   "get": {
     "summary": "Get ringtones",
-    "tags": ["Ringtone"],
+    "tags": ["Random"],
     "parameters": [
       {
         "in": "query",
@@ -393,7 +393,7 @@
 "/styletext": {
   "get": {
     "summary": "Style text",
-    "tags": ["Style Text"],
+    "tags": ["Random"],
     "parameters": [
       {
         "in": "query",
@@ -511,7 +511,7 @@
       }
     }
   },
-    "/api/tiktok": {
+    "/tiktok": {
       "get": {
         "tags": ["Downloader"],
         "summary": "Unduh Video TikTok",
@@ -534,7 +534,7 @@
         }
       }
     },
-    "/api/igdl": {
+    "/igdl": {
       "get": {
         "tags": ["Downloader"],
         "summary": "Unduh Konten Instagram",
@@ -604,7 +604,7 @@
       }
     },"/cuaca": {
   "post": {
-    "tags": ["Post"],
+    "tags": ["Random"],
     "summary": "Mendapatkan informasi cuaca",
     "description": "Endpoint untuk mendapatkan informasi cuaca berdasarkan nama kota.",
     "requestBody": {
@@ -955,7 +955,7 @@
         }
       }
     },
-    "/api/igstalk": {
+    "/igstalk": {
       "get": {
         "tags": ["Search"],
         "summary": "Informasi Pengguna Instagram",

@@ -31,6 +31,45 @@
           }
         }
       }
-    }
+    },
+"/pinterest": {
+  "get": {
+    "summary": "Get images from Pinterest",
+    "tags": ["Search"],
+    "parameters": [
+      {
+        "in": "query",
+        "name": "query",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "description": "Query string to search for images"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Successful response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL of the image"
+                  }
+                }
+              }
+            }
           }
+        }
+      }
+    }
+  }
+}    
+}
 }

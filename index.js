@@ -28,7 +28,7 @@ app.use(express.json());
 // CSS kustom untuk mengubah tampilan Swagger UI
 
 // Serve Swagger documentation beserta CSS kustom
-app.use("/api-docs", swaggerAssetsRoute);
+app.use("/docs", swaggerAssetsRoute);
 app.get("/swagger.json", (req, res) => {
   const swaggerPath = path.join(__dirname, "/swagger.json");
 

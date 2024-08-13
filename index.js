@@ -9,8 +9,6 @@ const igdlRoute = require("./routes/igdl");
 const ghStalk = require("./routes/ghStalk");
 const ffstalk = require("./routes/ffstalk");
 const cuaca = require("./routes/cuaca");
-const ronaldo = require("./routes/random/ronaldo");
-const messi = require("./routes/random/messi");
 const apalah = require("./routes/apalah");
 
 const swaggerAssetsRoute = require("./routes/swaggerAssetsRoute");
@@ -44,8 +42,6 @@ app.use("/", igdlRoute);
 app.use ("/", ghStalk);
 app.use ("/", ffstalk);
 app.use ("/", cuaca);
-app.use ("/", ronaldo);
-app.use ("/", messi);
 app.use ("/", apalah);
 
 

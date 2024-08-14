@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get("/ai", async (req, res) => {
   const query = req.query;
-  if (! query) {
+  if (!query) {
     return res.status(400).json({
       status: 400,
       message: "Masukkan Query!"

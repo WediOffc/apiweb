@@ -4,16 +4,16 @@ const axios = require("axios");
 const router = express.Router();
 
 router.get("/ai", async (req, res) => {
-  const prompt = req.query.prompt;
-  if (!prompt) {
+  const query = req.query;
+  if (! query) {
     return res.status(400).json({
       status: 400,
-      message: "Masukkan Prompt!"
+      message: "Masukkan Query!"
     });
   }
 
   try {
-    const response = await chat(prompt);
+    const response = await chat(query);
     res.status(200).json(response);
   } catch (error) {
     console.error(error);
@@ -26,7 +26,7 @@ router.get("/ai", async (req, res) => {
 
 module.exports = router;
 
-async function chat(prompt) {
+async function chat(query) {
   const response = await axios({
     method: "POST",
     url: "https://chateverywhere.app/api/chat",
@@ -44,11 +44,11 @@ async function chat(prompt) {
         maxLength: 12000,
         tokenLimit: 4000,
       },
-      prompt: prompt,
+      prompt: query,
       messages: [
         {
           pluginId: null,
-          content: prompt,
+          content: query,
           role: "user"
         }
       ]

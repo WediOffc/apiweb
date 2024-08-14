@@ -16,7 +16,7 @@
         "description": "Endpoint untuk interaksi dengan AI",
                "parameters": [
           {
-            "name": "query",
+            "name": "prompt",
             "in": "query",
             "description": "Turbo 3.5",
             "required": true,

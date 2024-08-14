@@ -9,14 +9,14 @@
     }
   },
   "paths": {
-    "/ai": {
+    "/api/ai/ai": {
       "get": {
         "tags": ["Ai"],
         "summary": "Interaksi dengan AI",
         "description": "Endpoint untuk interaksi dengan AI",
                "parameters": [
           {
-            "name": "prompt",
+            "name": "query",
             "in": "query",
             "description": "Turbo 3.5",
             "required": true,

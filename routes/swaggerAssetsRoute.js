@@ -10,7 +10,7 @@ const customCss = `
         display: none;
     }
     .swagger-ui .topbar:before {
-        content: "Akuivan13 - Website";
+        content: "A simple DiiOffc - API";
         display: block;
         font-weight: bold;
         color: black;

@@ -9,7 +9,7 @@
     }
   },
   "paths": {
-    "/api/ai/ai": {
+    "/ai": {
       "get": {
         "tags": ["Ai"],
         "summary": "Interaksi dengan AI",

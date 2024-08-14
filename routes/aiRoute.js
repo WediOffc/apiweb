@@ -3,7 +3,7 @@ const axios = require("axios");
 
 const router = express.Router();
 
-router.get("/api/ai/ai", async (req, res) => {
+router.get("/ai", async (req, res) => {
   const query = req.query;
   if (! query) {
     return res.status(400).json({

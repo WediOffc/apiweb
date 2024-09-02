@@ -5,6 +5,7 @@ const { inject } = require("@vercel/analytics");
 const tiktokRoute = require("./routes/tiktokRoute");
 const igstalkRoute = require("./routes/igStalk");
 const aiRoute = require("./routes/aiRoute");
+const downloadRoute = require("./routes/downloadRoute");
 const igdlRoute = require("./routes/igdl");
 const ghStalk = require("./routes/ghStalk");
 const ffstalk = require("./routes/ffstalk");
@@ -38,6 +39,7 @@ app.get("/swagger.json", (req, res) => {
 app.use("/", tiktokRoute);
 app.use("/", igstalkRoute);
 app.use("/", aiRoute);
+app.use("/", downloadRoute);
 app.use("/", igdlRoute);
 app.use ("/", ghStalk);
 app.use ("/", ffstalk);

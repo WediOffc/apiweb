@@ -33,7 +33,8 @@ async function ytdl(url) {
                 quality: data.data.video_formats[0].quality,
                 url: data.data.video_formats[0].url,
             };
-            resolve(result);
+            return(result)
+            resolve(data);            
         }
         catch (err) {
             reject(err);

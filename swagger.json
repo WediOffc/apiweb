@@ -70,6 +70,29 @@
       }
     }
   }
-   }    
+   },
+    "/ytdl": {
+      "get": {
+        "tags": ["Downloader"],
+        "summary": "Download audio & video dari YouTube",
+        "description": "Endpoint untuk download audio & video dari YouTube",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "URL video di YouTube"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
 }
 }
